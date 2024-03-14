@@ -7,13 +7,15 @@
     text-decoration: none;
     list-style: none;
 }
-body{
+
+body {
     background-color: white;
 }
+
 :root {
     --product-gap: 20px;
     --product-row-count: 4;
-  }
+}
 
 #backgraund {
     background-image: url("h1_hero1.png.webp");
@@ -27,18 +29,21 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+   /* top: 0;
+    position: fixed;*/
 
     height: 120px;
 
 }
-.container{
+
+.container {
     width: 1200px;
     max-width: 95%;
     margin: 0 auto;
 }
 
 
-ul{
+ul {
     display: flex;
     gap: 50px;
     color: black;
@@ -46,7 +51,8 @@ ul{
     align-items: center;
     font-family: "Slackside One", cursive;
 }
-button{
+
+button {
     padding: 15px 32px;
     border: none;
     border-radius: 5px;
@@ -55,29 +61,33 @@ button{
     color: white;
 
 }
-h2{
+
+h2 {
     text-align: center;
     font-size: 50px;
     margin-top: 200px;
 }
-p{
+
+p {
     font-size: 30px;
     text-align: center;
     word-wrap: wrap;
 }
-.box{
-   width: 300px;
-   height: 70px;
+
+.box {
+    width: 300px;
+    height: 70px;
     background-color: rgb(38, 180, 43);
     color: black;
     margin: 50px 800px;
     display: inline-block;
     position: relative;
-    /* overflow: hidden; */
+    overflow: hidden;
     z-index: 1;
     cursor: pointer;
 }
-.box::before{
+
+.box::before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -86,55 +96,61 @@ p{
     right: 0;
     bottom: 0;
     background: #250cc5;
-    overflow: hidden;
+
     transform: scaleY(0);
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
-    transition-property:transform;
+    transition-property: transform;
     transition-duration: 0.5s;
     transition-timing-function: ease-out
 }
 
-.box:hover::before{
-    top:-100%;
+.box:hover::before {
+    top: -100%;
     left: 0%;
-   
+    overflow: hidden;
+
     -webkit-transform: scaleY(1);
     transform: scaleY(1);
     -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-    
+    transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+
 }
 
-    
 
-.about{
+
+.about {
     transition: 0.6s;
-    
+
 }
-.about:hover{
+
+.about:hover {
     transform: translateY(-20px);
 }
-.car img{
+
+.car img {
     margin: 50px 500px;
     position: absolute;
     animation: masin 7s linear infinite;
 
 
 }
-@keyframes masin{
-   0% {
-   
-    right: -90px;
-   } 
-   50%{
-    right: 70px;
-   
-   }
-   100%{
-    right: 0px;
-    
-   }
+
+@keyframes masin {
+    0% {
+
+        right: -90px;
+    }
+
+    50% {
+        right: 70px;
+
+    }
+
+    100% {
+        right: 0px;
+
+    }
 }
 
 .products {
@@ -146,6 +162,7 @@ p{
 
 
 }
+
 .product {
     width: calc(100% / 5);
     text-align: center;
@@ -153,26 +170,28 @@ p{
     border-radius: 20px;
     position: relative;
 }
+
 .product {
-    width: calc(100% / var(--product-row-count) - var(--product-gap) - 
-    (var(--product-gap) / var(--product-row-count)));
-  
+    width: calc(100% / var(--product-row-count) - var(--product-gap) - (var(--product-gap) / var(--product-row-count)));
+
     text-align: center;
-   
-  }
+
+}
+
 .product img {
     width: 100%;
     height: 40vh;
     border-radius: 20px 20px 0px 0px;
 }
-.seyahet{
+
+.seyahet {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
+
 h5 {
     margin-left: 25px;
 
 }
-
